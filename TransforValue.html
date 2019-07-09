@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passing Value</title>
+</head>
+<body>
+	<form name="info" onsubmit="return false;">
+		<table>
+			<tr>
+				<td>
+					<label>Firstname</label>
+				</td>
+				<td><input type="text" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Lastname</label>
+				</td>
+				<td><input type="text" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					<label>E-mail</label>
+				</td>
+				<td><input type="email" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Address</label>
+				</td>
+				<td><input type="text" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Gender</label>
+				</td>
+				<td><input type="radio" name="Gender">
+					<label>Male</label>
+					<input type="radio" name="Gender">
+					<label>Female</label>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>City</label>
+				</td>
+				<td><input type="text" name=""></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Password</label>
+				</td>
+				<td>
+					<input type="password" name="">
+				</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Massage</label>
+					</td>
+					<td>
+						<textarea></textarea>
+					</td>
+				</tr>
+			
+			<tr>
+				<td><input type="submit" onclick="pass()"></td>
+			</tr>
+		</table>
+	</form>
+	<br><br><br><hr>
+	<form>
+		<input type="text" name="">
+		<input type="button" value="Check" onclick="check()">
+		<textarea id="set" cols="25" rows="20"></textarea>
+	</form>
+	<script type="text/javascript">
+		function check(){
+			var len=document.forms[1].elements[0].value;
+		console.log(len.length);
+
+		}
+
+		function pass(){
+			var a="";
+			var b=document.info.length;
+
+			for(var i=0; i<b; i++){
+				a+=document.forms[0].elements[i].value +'\n';
+
+				
+			}
+			// document.getElementById("set").innerHTML+=a;
+			document.forms[1].elements[1].value+=a;
+		}
+	</script>
+
+</body>
+</html>

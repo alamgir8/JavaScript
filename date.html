@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date</title>
+</head>
+<body>
+	<button onclick="currentDate()">To show the current date</button>
+	<p id="bt" style="text-align: center; font-size: 50px; color: green;"></p>
+
+	<script type="text/javascript">
+
+		function currentDate(){
+			var d= new Date();
+			
+			for(i=0; i<30; i++){
+				
+			}
+			
+			var da= d.getDay()+i;
+			if (da<10) {da= "0"+da;}
+
+			var mo= d.getMonth()+1;
+			if (mo<10) {mo="0"+mo;}
+
+			var yer= d.getFullYear();
+			
+
+			document.getElementById("bt").innerHTML= da + " - "+ mo + " - " + yer;
+		
+	}
+		
+	</script>
+
+</body>
+</html>

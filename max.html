@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Max Number</title>
+	<style type="text/css">
+		form{
+			display: inline-block;
+			text-align: center;
+			padding: 15px;
+			margin-top: 5px;
+		}
+		label,input{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	
+
+
+
+<!-- 	<script type="text/javascript">
+		var n=[];
+		for (var i =1; i<5; i++) {
+			n.push(prompt('input a number'));
+			}
+		
+
+			document.write('Highest Number Is: ' +Math.max(...n));
+		
+	</script>
+	 -->
+
+	<!--  <form name="info">
+		<input type="Number" id="one">
+		<input type="Number" id="two">
+		<input type="Number" id="three">
+		<input type="Number" id="four">
+		<input type="Number" id="five">
+		<input type="button"  value="Click to show Max value" onclick="ma()">
+		<input type="reset" value="Reset">
+		<h3 id="m" style="text-align: center;"></h3>
+
+
+	</form> -->
+
+
+	<form name="info">
+		<label>Name</label>
+		<input type="text" name="tex1"><br>
+		<label>Gender</label>
+		<select name="sel">
+			<option>Male</option>
+			<option>Female</option>
+		</select><br>
+		<label>Address</label>
+		<input type="text" name="add"><br>
+		<label>Email</label>
+		<input type="email" name="em"><br>
+		<label>Username</label>
+		<input type="text" name="user"><br>
+		<label>Password</label>
+		<input type="password" name="pass"><br>
+		
+
+	</form>
+	<button onclick="pass()">Submit</button>
+	<hr>
+	<form>
+		
+		<textarea id="put" rows="8" cols="30" ></textarea>
+	</form>
+	<script type="text/javascript">
+
+		function pass(){
+			var a="";
+			var b=document.info.length;
+			for (var i=0; i<b; i++) {
+				a+=document.info.elements[i].value + "\n";
+			}
+			// console.log(a);
+			document.getElementById("put").innerHTML=a;
+		}
+		
+
+		// function pass(){
+		// 	var a='';
+		// 	var b=document.info.length;
+
+		// 	for (var i=0; i<b; i++) {
+		// 		a+=document.info.elements[i].value+ "\n";
+		// }
+		// console.log(a);
+		// document.getElementById("put").innerHTML=a;
+			
+
+		// }
+	// 	var d=20;
+
+	// 	function sum(){
+	// 		var a=10;
+	// 		var b=15;
+	// 		var c=a+b+d;
+	// 		console.log(c);
+	// 	}
+
+	// sum();
+
+
+
+		// var n=[];
+
+		// for (var i =0; i<5; i++) {
+		// 	n.push(prompt('inter a Number'));
+		// }
+
+		// document.write(Math.max(...n));
+
+		// function ma(){
+		// 	var a=document.getElementById("one").value;
+		// 	var b=document.getElementById("two").value;
+		// 	var c=document.getElementById("three").value;
+		// 	var d=document.getElementById("four").value;
+		// 	var e=document.getElementById("five").value;
+		// 	var n=Math.max(a,b,c,d,e);
+		// 	document.getElementById("m").innerHTML=n;
+		// }
+		
+	</script>
+
+</body>
+</html>

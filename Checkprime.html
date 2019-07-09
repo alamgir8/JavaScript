@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkprime</title>
+	<style type="text/css">
+		table, th, td{
+			width: 60%;
+			border-collapse: collapse;
+			border: 2px solid grey;
+			margin:0 auto;
+		}
+	.g{
+		color: green;
+	}
+	.r{
+		color: red;
+
+	}
+
+	</style>
+	<script type="text/javascript">
+		function prime(n){
+			for(var i=2; i<n; i++)
+				if (n%i===0) return "<span class='r'> Not Prime</span>"; return "<spna class='g'> Prime </span>";
+
+		}
+	</script>
+</head>
+<body>
+	<h3>Check Primn Or Not Prime</h3>
+	<input type="number" name="" onkeyup="Check(this.value)">
+	<p id="put"></p><br><hr><br><br><br><br>
+	<script type="text/javascript">
+		function Check(n){
+			var prime=true;
+			for(var i=2; i<n; i++){
+				if (n%i===0) {var prime=false; break;}
+			}
+			if (prime==true) {
+				document.getElementById("put").innerHTML="prime";
+			}
+			else{document.getElementById("put").innerHTML="Not Prime";}
+		}
+	</script>
+	
+	<table>
+		<tr>
+			<th>Number</th>
+			<th>Prime or Not</th>
+		</tr>
+		<script type="text/javascript">
+			for(var i=2; i<101; i++){
+				document.write("<tr><td>"+ i + "</td><td>" + prime(i) + "</td>");
+			}
+		</script>
+	</table>
+
+</body>
+</html>

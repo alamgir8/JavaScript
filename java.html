@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>java</title>
+	<style>
+		#timeConteiner{
+			text-align: center;
+			font-size: 3em;
+			color: #055F0F;
+		}
+	
+	</style>
+</head>
+
+
+<body>
+	 <h3 id="timeConteiner"></h3>
+
+	<!--<h1 onClick="hi()">setInterval</h1>
+	<p id="result"></p>
+	<form name="info1">
+		<input type="text" name="text" >
+		<input type="button" name="button1" value="Click to See me!" onclick="seeme()">
+	</form>
+	<br><br>
+	<form name="info">
+		<input type="text" name="puppy">
+		<input type="button" name="button" value="Click to change the input area" onclick="changeme()">
+
+	</form>-->
+	
+
+    <script>
+		
+			var d= new Date();
+			document.getElementById("timeConteiner").innerHTML =  d.getHours() +
+			" : " + 
+			d.getMinutes() + 
+			" : " + 
+			d.getSeconds +
+			" : " + 
+			d.getMilliseconds;
+				}
+
+			var timeHandler = setInterval(getTime,100);
+			//setTimeout(getTime,3000);
+		   function startclock(){
+			   timeHandler = setInterval(getTime,100);
+		   }
+		function stopclock(){
+			clearInterval(timeHandler);
+		}
+
+		/*function hi(){
+			document.getElementById("result").innerHTML="I am called " + Math.random();
+		}
+		setInterval(hi,1000);
+		//Increment and Decrement*/
+		
+		/*let x=5;
+	
+		document.write("The Value of X : " + x++ +" <br> ");
+		++x;
+		document.write("The Value of X is: " + ++x +" <br>");
+		let y=7;
+		y--;
+		document.write("The Value of X : " + y-- +" <br> ");
+		document.write("The Value of X : " + --y +" <br> ");
+		*/
+		
+		/*for (var i = 1; i<=100; i++) {
+			if (i==50) {break;}
+			document.write(i + " ");
+		}
+		*/
+	
+
+
+       /* function fillItIn() {
+        //Substitute your own email address on the next line
+        document.form.email.value="bill@sandlight.com";
+        }
+        function c(){
+            alert(document.form.email.value);
+            document.form.email.value="";
+        }
+        */
+
+
+       /*function seeme(){
+        	document.info1.text.value="I\'m  Alamgir Hossain";
+        	document.info1.button1.value="Click to See me!";
+        }
+ 
+        function changeme(){
+        	document.info.puppy.value="I have been clicked";
+        	document.info.button.value="Click to change the input area <hr>";
+        }*/
+
+        /*var bigCities= new Array(
+        "Beijing", 
+        "Tokyo", 
+        "Mexico City", 
+        "New York", 
+        "Los Angeles", 
+        "London", 
+        "Berlin", 
+        "Bloomfield");
+            var counter=0;
+            var metropolis="";
+            bigCities.sort( );
+            do {
+            metropolis += bigCities[counter] + "<br>";
+            alert(metropolis);
+            counter++;
+            } while (counter < bigCities.length)
+            document.write(metropolis);
+
+
+            let index=0;
+            let city="";
+            bigCities.sort();
+
+            do{
+            	city+=bigCities[index] + "<br>";
+            	alert(city);
+            	index++;
+            }
+
+            while(index<bigCities.length)
+            	document.write(city);*/
+
+           /* let a=["Aminul","Alamgir","Alamin","Sakib"];
+
+            a sort(){
+            	 document.write(a);
+
+            }
+			
+			*/
+           
+		
+		
+		
+		
+	</script>
+
+</body>
+</html>

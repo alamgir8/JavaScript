@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ludo</title>
+</head>
+<body>
+	<h3>lodu</h3>
+	<input type="button" value="Go" onclick="pass()">
+	<p id="res"></p>
+	<script type="text/javascript">
+		function pass(){
+			var ludo=Math.round(Math.random()*10)%7;
+			
+			if (ludo==0) {ludo=1;}
+			document.getElementById("res").innerHTML=ludo;
+		}
+	</script>
+
+</body>
+</html>

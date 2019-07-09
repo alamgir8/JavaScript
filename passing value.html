@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>passing value</title>
+</head>
+<body>
+	<form action='somepage.html' OnSubmit="return formHandler();" method="get">
+<h1 align="center">Set the parameters you would like to visualize</h1>
+
+Center Frequency: <input type="text" name="cf" id="cf"><br>
+Bandwidth: <input type="text" name="bw" id="bw"><br>
+Number of Bins: <input type="text" name="bins" id="bins"><br>
+Number of Values to be Visualized: <input type="text" name="values" id="values"><br>
+<input type="submit" value="Submit">
+</form>
+
+
+<script type='text/javascript'>
+function formHandler()
+{
+        console.log(document.getElementById("cf").value);
+  return true;
+}
+</script>
+
+</body>
+</html>

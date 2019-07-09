@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mile to Km</title>
+	<style type="text/css">
+		table,td{
+			border-collapse: collapse;
+			border:1px solid green;
+		}
+		table{
+			width: 60%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="n()">Click Here to Show Km</button><br><br>
+	<button onclick="m()">Click Here to Hide Km</button>
+	
+	<table >
+		<tr>
+			<th>Mile</th>
+			<th>KM</th>
+		</tr>
+		<tbody id="q"></tbody>
+		
+		<script type="text/javascript">
+
+			var n=function(){
+			
+			for (var i = 1; i<100; i++) {
+				document.getElementById("q").innerHTML+=('<tr><td>'+ i +'</td><td>'+ (i*1.61).toFixed(2) +'</td></tr>');
+			}
+			}
+				
+		</script>
+	</table>
+	
+</body>
+</html>
+
+

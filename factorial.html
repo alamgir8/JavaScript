@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial</title>
+</head>
+<body>
+	<h3>Check Factorial</h3>
+	<input type="number" onkeyup="Check(this.value)">
+	<p id="put"></p>
+	<script type="text/javascript">
+		function Check(n){
+			var total=1;
+			for(var i=1; i<=n; i++){
+				total*=i;
+			}
+			document.getElementById("put").innerHTML=total;
+		}
+	</script>
+
+</body>
+</html>

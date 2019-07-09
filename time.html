@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time</title>
+</head>
+<body>
+	<button onclick="currentTime()">To show the current time</button>
+	<p id="bt" style="text-align: center; font-size: 50px;
+	color: green;"></p>
+
+
+	<script type="text/javascript">
+
+		function currentTime(){
+			var d= new Date();
+			var pa= d.getHours();
+			if (pa<12) {pa="AM";}
+			else{
+				pa="PM"
+			};
+			var h= d.getHours();
+			if (h>12) {h=(h-12);}
+			if (h<10) {h="0"+h;}
+
+			var m= d.getMinutes();
+			if (m<10) {m="0"+m;}
+			var s= d.getSeconds();
+			if (s<10) {s="0"+s;}
+
+
+			document.getElementById("bt").innerHTML= h + " : " + m + " : "+ s +" "+ pa;
+			setInterval(currentTime,1000);
+		}
+		
+	</script>
+
+</body>
+</html>

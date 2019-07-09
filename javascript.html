@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<style type="text/css">
+		#Mobiles, #Fruits{
+			display: none;
+
+		}
+		img{
+			width: *00px;
+		}
+
+		 #imageContainer{ text-align: center;} 
+    div img{
+       width: 750px;
+    }
+
+    .bt{
+    	text-align: center;
+    	font-size: 30px;
+
+    }
+
+
+	</style>
+</head>
+<body id="changecolor">
+<div>
+	<!--<h2>Click to change color</h2>
+	<button onclick="document.bgColor='red'">Make me red.</button><br><br><br>
+	<button onclick="document.bgColor='green'">Make me green. </button><br><br><br>
+	<button onclick="document.bgColor='yellow'">Make me yellow.</button><br><br><br><hr>
+	<h2>Change the text color</h2>
+	<p id="changeparagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<br><br><br>
+	<button onclick="makered()">Make text red</button><br><br><br>
+	<button onclick="makegreen()">Make text green</button><br><br><br>
+	<button onclick="makeyellow()">Make text yellow</button>
+	<button onclick="makeblack()">Make me black</button>-->
+	<!--<h3 onclick="showmobiles()">Mobiles</h3>
+	<h3 onclick="showfruits()">Fruits</h3>
+</div><hr>
+<h2 id="pageTitle">Click to view the images</h2>
+<div id="Mobiles">
+	<img src="images/81b5agEMpUL._SY679_.jpg">
+	<img src="images/Apple-iPhone-XR-128GB.jpg">
+	<img src="images/apple-iphone-xr-128gb-blue.jpg">
+	<img src="images/asus-zenfone-lite-l1.jpg">
+</div>
+<div id="Fruits">
+	
+	<img src="images/1.jpeg">
+	<img src="images/2.jpg">
+	<img src="images/3.jpg">
+	<img src="images/4.jpg">
+</div>-->
+<!--<img id="Image" onclick="changeimage()" src="images/pic_bulboff.gif" width="50" height="280">
+<p>Click to Bulb on/off</p>
+
+<form name="info">
+	<input type="text" name="text" >
+	<input type="button" name="button" value="Button" onmouseover="FillUp()" onmouseout="Cleared()">
+
+</form>
+
+<div id="imageContainer">
+        <img id="img" src="images/1 (1).png" alt="">
+    </div>
+
+
+      <button onclick="imagerotator()">Change image</button><br><hr>
+
+      <div>
+      	<img id="im" src="images/1 (1).png" >
+      </div>
+
+      <button onclick="changeimage()">Change Image</button>
+
+      <div>
+      	<h2 id="Clock" style="text-align: center;font-size: 60px; color: green;"></h2>
+      </div><br>
+      <hr>
+      <button  onclick="startClock()" class="bt">Start Clock</button>
+      <button  onclick="stopClock()" class="bt">Stop Clock</button>
+      <h2 >To Close This Page Just Click On The Button</h2>
+      <a href="#" onclick="openup()">Open</a><br>
+      <a href="#" onclick="shut()">Close</a>
+
+
+      <p id="dis"></p>
+
+    
+
+     <form name="info" style="text-align: center;">
+     	<h2>Add Your Desire Number</h2>
+     	<input type="number" name="one">
+     	<input type="number" name="two">
+     	<input type="button" name="button" value="Add Number" onclick="addNumber()"><br><br><br>
+     	<h2>Multiply Your Desire Number</h2>
+     	<input type="number" name="three">
+     	<input type="number" name="four">
+     	<input type="button" name="button" value="Multiply Number" onclick="multiplyNumber()"><br><br><br>
+     	<h2>Minus Your Desire Number</h2>
+     	<input type="number" name="five">
+     	<input type="number" name="seven">
+     	<input type="button" name="" value="Minus Number" onclick="minusNumber()">
+     </form>-->
+
+    <!--  <form name="info">
+     	<input type="text" name="one">
+     	<input type="button" name="" value="down" onkeydown="keyD()"><br><br>
+     	<input type="text" name="two">
+     	<input type="button" name="" value="up" onkeyup="keyU()"><br><br>
+     	<input type="text" name="three">
+     	<input type="button" name="" value="focus" onfocus="onF()"><br><br>
+     	<input type="text" name=" four">
+     	<input type="button" name="" value="Press" onkeypress="onK()">
+     </form> -->
+
+
+
+<script type="text/javascript">
+	function printAr(){
+		console.log("My Name Is Md Alamgir Hossain");
+	}
+
+	printAr();
+	printAr();
+
+	function addNumber(x, y, z){
+		var sum=x+y*z;
+		console.log('Sum of ' + x +', ' + y + ' and '+ z + ' is: ' + sum);
+	}
+
+	function n(firstname, lastname){
+	
+		console.log('Welcome to Mr, ' + firstname + ' ' + lastname);
+	}
+
+	n('Alamgir', 'Hossain');
+
+
+
+	addNumber(5, 10, 20);
+	addNumber(15, 20,5);
+	addNumber(30, 40,2);
+
+	// function keyD(){
+	// 	document.info.one.value= "My name is Md Alamgir Hossain";
+	// }
+
+	// function keyU(){
+	// 	document.info.two.value= "What are you doing here?";
+	// }
+
+	// function onF(){
+	// 	document.info.three.value= "Who are You?";
+	// }
+
+	// function onK(){
+	// 	document.info.four.value= "Hey their!";
+	// }
+
+
+
+
+	/*function addNumber(){
+		var sum=parseFloat(document.info.one.value) + parseFloat (document.info.two.value);
+		alert(sum);
+	}
+
+	function multiplyNumber(){
+		var mul= document.info.three.value * document.info.four.value;
+		alert(mul);
+	}
+
+	function minusNumber(){
+		var minus= document.info.five.value-document.info.seven.value;
+
+		alert(minus);
+	}
+	
+
+	var n="My Name id Md. Alamgir Hossain.";
+	var em="ahossain38900@gmail.com";
+	var op=" I am a STUDENT i am aming AMERICA";
+
+	document.write(n.length+"<br>");
+
+	document.write(n.charAt(6)+"<br>");
+	document.write(n.charCodeAt(5)+"<br>");
+	document.write(n.concat(op)+"<br>");
+	document.write(n.endsWith('in.')+"<br>");
+	document.write(em.includes("@")+"<br>");
+	document.write(n.indexOf('id')+"<br>");
+	document.write(n.lastIndexOf('Hossain')+"<br>");
+	document.write( op.match(/am/gi)+"<br>");
+	document.write(n.replace('Alamgir Hossain','Sakib Hasan')+"<br>");
+	document.write(em.repeat(4)+"<br>");
+	document.write(n.search('id')+"<br>");
+	document.write(n.split('')+"<br>");
+	document.write(n.slice(0, 5)+"<br>");
+	document.write(n.)
+
+
+
+
+
+
+	function Bio(Name, FatherName, MotherName, Village, District, Nationality){
+		this.n=Name;
+		this.fn=FatherName;
+		this.mn=MotherName;
+		this.v=Village;
+		this.d=District;
+		this.m=Nationality;
+	}
+
+	var Alamgir=new Bio("Alamgir","Ramzan ali Tarafdar","Amiran Begum","Boyrapara","Jamalpur, Dewangonj","Bangladeshi");
+
+	console.log(Alamgir.d);
+
+	 function d(){
+        var tree = new Object();
+        tree.size="Big and taller than Uncle Jim.";
+        tree.shade="It keeps us cool in the summer.";
+        tree.fall="We make giant leaf pumpkins."
+        var display = tree["size"];
+        display += tree["shade"];
+        display += tree["fall"];
+        //document.write(display);
+        document.getElementById("dis").innerHTML = display;
+    }
+
+
+
+		    var n= "Islamic Development Bank";
+		    var m = " BISEW";
+		    var em = "idb@idbbisew.com";
+		    //alert(n[5]);
+		    document.write("n contains " + n.length + " characters");
+		    document.write("<h3>CharAt</h3>");
+		    document.write("Position 5 has : "+n.charAt(5));
+		    document.write("<h3>CharCodeAt</h3>");
+		    document.write("Character code at 5 is : "+n.charCodeAt(5));
+		    document.write("<h3>Concat</h3>");
+		    document.write(n.concat(m));
+		    document.write("<h3>endsWith</h3>");
+		    document.write(n.endsWith("nk"));
+		    document.write("<h3>includes</h3>");
+		    document.write(em.includes("@"));
+		    document.write("<h3>indexOf: D</h3>");
+		    //document.write(n.indexOf("D",2));
+		    document.write(n.indexOf("D"));
+		    document.write("<h3>lastIndexOf : l</h3>");
+		    document.write(n.lastIndexOf("l"));
+		    document.write("<h3>match</h3>");
+		    var str = "The rain in SPAIN stays mainly in the plain"; 
+		    var res = str.match(/ain/gi);
+		    document.write(str + "<br>" + res);
+		    document.write("<h3>repeat</h3>");
+		    var str = "Hello world!<br>";
+		    document.write(str.repeat(2));
+		    document.write("<h3>replace</h3>");
+		    var str = "Visit Microsoft! Microsoft has windows";
+		    var res = str.replace(/Microsoft/g, "W3Schools");
+		    document.write(res);
+		    document.write("<h3>search</h3>");
+		    var str = "Visit W3Schools! Visit W3Schools! W3Schools has windows";
+		    var n = str.search("W3Schools");
+		    //var n = str.search("W4Schools"); //-1
+		document.write(n);
+		    document.write("<h3>split</h3>");
+		    var EUdate = "07###02###2019";
+		    var splitted = EUdate.split("###");
+		    console.log(splitted);
+		    var BNdate = splitted[1]+"-"+splitted[0]+"-"+splitted[2];
+		    document.write(EUdate +" = "+BNdate);
+		    document.write("<h3>startsWith:The startsWith() method is case sensitive.</h3>");
+		    var str = "Hello world, welcome to the universe.";
+			var n = str.startsWith("Hello");
+			document.write(n);
+			document.write("<h3>substr(start, length)</h3>");
+			var str = "Hello world!";
+			var res = str.substr(1, 4);
+			document.write(res);
+			document.write("<h3>subString(start, end)</h3>");
+			var str = "Hello world!";
+			var res = str.substring(1, 4);
+			document.write(res);
+			document.write("<h3>trim:The trim() method removes whitespace from both sides of a string.</h3>");
+			var str = "       Hello World!        ";
+			document.write(str.trim());
+			var myWord = new String("It is impolite to wink!");
+			document.write(myWord);
+			document.write("<hr>");
+			//never use the following code
+			myWord=myWord.substring(18,22).italics().fontsize(7).fontcolor("red").blink();
+			document.write(myWord);*/
+
+
+
+
+
+
+	/*function Mall(stName,address,product) {
+        this.n=stName;
+        this.a=address;
+        this.p=product;
+    }
+    var shah_ali_plaza = new Mall("SAP","Mirpur 10","Mobile");
+    alert(shah_ali_plaza.n);
+    var jamuna = new Mall("Jamina Future Park","Bashundhara","Electronics");
+    alert(jamuna.n);*/
+
+	/*function openup(){
+	open("", "Window", "width=200,height=100");
+	}
+	function shut(){
+	close();
+
+	}
+	function getTime(){
+	var d=new Date();
+	var s=d.getSeconds();
+	if (s<10) {s= "0"+s;}
+	var ms=d.getMilliseconds();
+	if (ms<10) {ms= "00"+ms;}
+	else if (ms<100) {ms = "0"+ms;}
+	else{ms=ms;}
+		document.getElementById("Clock").innerHTML= d.getHours()+ ":"+ d.getMinutes()+":"+ s + ":" + ms;
+
+		}
+	var timeHandular=setInterval(getTime,10);
+
+	function startClock(){
+		timeHandular=setInterval(getTime,10);
+	}
+	function stopClock(){
+		clearInterval(timeHandular);
+	}
+
+	//setTimeout(getTime,3000);	*/
+
+
+
+	 /*var imagenumber = 1;
+        var totalimage = 5;
+    var imagerotator = function(){
+        if(imagenumber == 5){ imagenumber = 0;}
+        imagenumber++;
+        var imagesrc = "images/1 ("+imagenumber+").png";
+        console.log(imagesrc);
+        document.getElementById("img").src = imagesrc;
+    }
+    setInterval(imagerotator,5000);
+
+
+
+    var imageN=1;
+    var totalI=5;
+
+    function changeimage(){
+    	if (imageN==5) {imageN=0;}
+    	imageN++;
+    	var imsrc="images/1 ("+imageN+").png";
+    	document.getElementById("im").src=imsrc;
+    }
+
+    setInterval(changeimage,500);*/
+
+
+
+
+	/*var arr=["Aminul","Alamgir","Alamin","Sakib"];
+	arr.push("Sohag","Faruk");
+	//arr.pop();
+	//arr.shift();
+	arr.unshift("Jahid","Sumon","Masum","Mehedi");
+	
+	console.log(arr);
+	newarr===arr;
+	console.log();
+
+
+	var newarr=arr.splice(5);
+	console.log(newarr);
+
+
+	let n=" ";
+	let m=0;
+
+	do{
+		n+= "The number is " + m + m++; " <br> "  
+		}
+		
+		while(m<10)
+		document.write(n);*/
+	
+	
+	
+
+	//arr.splice(6);
+	//console.log(arr);
+
+	//var aftersplice=arr.splice(5);
+	//console.log(aftersplice);
+	
+	/*function FillUp(){
+		document.info.text.value="ahossain38900@gmail.com";
+
+
+	}
+	function Cleared(){
+		document.info.text.value="Cleared";
+	}*/
+
+		//Showhide Content
+
+	/*function showmobiles(){
+		document.getElementById("Mobiles").style.display="block";
+		document.getElementById("Fruits").style.display="none";
+		document.getElementById("pageTitle").innerHTML="You are viewing Mobiles";
+	}
+	function showfruits(){
+		document.getElementById("Fruits").style.display="block";
+		document.getElementById("Mobiles").style.display="none";
+		document.getElementById("pageTitle").innerHTML="You are viewing Fruits";
+	}*/
+
+
+
+	//SeriesNumber
+
+	/*var n=prompt("input the serial number that you want");
+	document.write(n + " x 1 = " + (n*1) + " <br> ");
+	document.write(n + " x 2 = " + (n*2) + " <br> ");
+	document.write(n + " x 3 = " + (n*3) + " <br> ");
+	document.write(n + " x 4 = " + (n*4) + " <br> ");
+	document.write(n + " x 5 = " + (n*5) + " <br> ");
+	document.write(n + " x 6 = " + (n*6) + " <br> ");
+	document.write(n + " x 7 = " + (n*7) + " <br> ");
+	document.write(n + " x 8 = " + (n*8) + " <br> ");
+	document.write(n + " x 9 = " + (n*9) + " <br> ");
+	document.write(n + " x 10 = " + (n*10) + " <br> ");
+	document.write(n + " x 11 = " + (n*11) + " <br> ");
+	document.write(n + " x 12 = " + (n*12) + " <br> ");*/
+
+
+	//Bulb On,Off
+	/*function changeimage(){
+		var img=document.getElementById("Image");
+		if (img.src.match("bulbon")) {
+			img.src="images/pic_bulboff.gif";
+		}
+		else{
+			img.src="images/pic_bulbon.gif";
+		}
+	}*/
+
+	/*var number=prompt("type your choiable number");
+	var limit=prompt("type limit number");
+
+	for (var i =1; i<=limit; i++) {
+	const element=number*i;
+	document.write(number + " x " + i + " = " + (number*i) + " <br> ");
+	}*/
+
+	/*let answer=prompt("who is out creator?");
+
+	if (answer=="Allah") {
+		alert("You are right");
+		document.write("Your answer is <h1>Allah</h1> so <h3>You are right</h3>")
+	}
+	else{
+		alert("You are totally wrong.");
+		document.write("you are totally wrong")
+	}*/
+
+
+
+
+	/*function makered(){
+		
+		document.getElementById("changecolor").style.color="red";
+	}
+
+	function makegreen(){
+		document.getElementById("changecolor").style.color="green";
+	}
+
+	function makeyellow(){
+		document.getElementById("changecolor").style.color="yellow";
+	}
+	function makeblack(){
+		document.getElementById("changecolor").style.color='black';
+	}*/
+
+
+
+	//alert("1st line \n2nd line")
+	//alert("The name of our country is: \nBangladesh")
+
+
+
+	//document.write("The name of our country is: <h1> Bangladesh </h1>");
+	//document.write("<h4>I'am \'24\' year's old</h4>")
+
+
+	/*let students=new Object();
+	students.name="Alamgir";
+	students.Id=1251884;
+	students.email="ahossainz38900@gmail.com"
+
+	console.log(students.name);*/
+
+
+	/*let students={
+		name:"Alamgir",
+		Id:1251884,
+		email:"ahossain38900@gmail.com",
+		country:"Bangladesh",
+	}
+
+	console.log(students.name);*/
+
+
+	//let Students=new Array("A","B","C","D","E");
+
+	//console.log(Students.length);
+
+	/*let students=["a","b","c","d"];
+	console.log(students);*/
+
+
+	/*let fruits=new Array();
+	fruits[3]="Aam";
+	fruits[2]="Lichu";
+	fruits[4]="Jaam";
+	fruits[6]=[2,3,4];
+	fruits[10]=true;
+
+	console.log(fruits);*/
+
+
+	/*var a=10;
+	var b="20 pcs";
+
+	var x=a*b;
+	document.write(x);*/
+	//var a=10;
+	//var b="20 psc";
+	//var hello=a*b;
+	//document.write(20+"50 psc");
+
+
+
+
+/*let array =[["Class six","name","rasel","rokib","rabby","rokon"],["Class seven","Alim","Alo","Bablu"],["Class eight","Alamgir"]];
+
+let seven=array[2][1];
+console.log(seven);*/
+
+
+
+	/*for(let index= 1; index <= 100; index++) {
+		if (index==50) {continue;}
+	
+		console.log(index);
+		
+	}
+	for (var i =1; i <=100; i++) {
+		if (i==50) {break;}
+
+		console.log(i);
+	
+	}
+
+	for(let x = 1;x<=100;x++){
+		console.log("<h3> "+x+". i'll never be late in school again</h3>");
+        //document.write("<h3> "+x+". i'll never be late in school again</h3>");
+    }*/
+
+   /* function FillUp(){
+    	document.info.text.value="ahossain38900@gmail.com"
+    }
+
+    function Cleared(){
+    	document.info.text.value="Cleared"
+    }*/
+
+
+    /*var n=prompt("inter your number");
+
+    for (var i =1; i<=100; i++) {
+    	document.write(n + " x " + i + " = " + (n*i) + " <br> ");
+
+    }*/
+   
+</script>
+
+
+</body>
+</html>
