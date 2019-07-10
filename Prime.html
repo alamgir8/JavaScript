@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime</title>
+    <style>
+        table{ 
+            width: 100%;
+            border:2px double gray;
+            }
+    .g{ color:green;
+    }
+    .r{ color:red;
+    }
+    </style>
+    <script type="text/javascript">
+        function check(n){
+            for(var i=2; i<n; i++)
+            if (n % i===0) return "<span class='r'> Not Prime</span>";
+               return "<span class='g'> Prime </span>";
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Pirme or Not</th>
+        </tr>
+        <script type="text/javascript">
+        for (var i=2; i<=100; i++) {
+            document.write("<tr><td>"+ i + "</td><td> "+ check(i)+"</td> </tr>")
+        }
+
+            
+        </script>
+    </table>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{ 
+            width: 100%;
+            border:2px double gray;
+            }
+    .g{ color:green}
+    .r{ color:red}
+    </style>
+    <script type="text/javascript">
+        function check(num) {
+    for(var i = 2; i < num; i++)
+      if(num % i === 0) return "<span class='r'>Not Prime</span>";
+      return "<span class='g'>Prime</span>";
+  }
+    </script>
+</head>
+<body>
+    <h3>Prime number list</h3>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Prime?</th>
+        </tr>
+        <script>
+        for (let index = 1; index < 101; index++) {
+            document.write("<tr><td>"+index+"</td><td>"+check(index) +"</td></tr>");            
+        }
+        </script>
+    </table>
+</body>
+</html> -->
