@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoveCalculator</title>
+	<style type="text/css">
+		body{
+			background-color: grey;
+		}
+		form{
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h3>Click the love images to know how much she love you.</h3>
+		<input type="image" src="images/heart.jpg" width="300px" height="300px" name="heart" onclick="loveMe()">
+	</form>
+	<script type="text/javascript">
+		function loveMe(){
+			var M=Math.random()*100;
+			if (M>50) {
+				alert("She Loves Me!!")
+			}
+			else{
+				alert("She Not Love me!!")
+			}
+
+		}
+	</script>
+
+</body>
+</html>
+
+
+<!-- <html>
+<head>
+<style>
+body {
+font-family:verdana;
+font-size:11pt;
+color:red;
+background-color:#ffb7d0;
+font-weight:bold;
+}
+</style>
+<title>Image Form Element</title>
+<script language="Javascript">
+function lovesMe( ) {
+var cupid=Math.random( );
+cupid=Math.floor(cupid*100);
+var throb="";
+if (cupid > 50) {
+throb="She loves me!"
+//Change the gender pronoun to your preferences
+} else {
+throb="She loves me not....";
+}
+alert(throb);
+}
+</script>
+</head>
+<body>
+<center>
+<form name="heart">
+Click the heart five times to learn how he feels about you! <p>
+<input type=image src="images/heart.jpg" name="ache" onClick="lovesMe();"
+border=0><p>
+If the answer is incorrect, click the button five more times....
+</form>
+</center>
+</body>
+</html> -->

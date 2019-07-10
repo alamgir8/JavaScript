@@ -8,10 +8,11 @@
 		<input type="text" placeholder="inter your username">
 		<input type="button" value="Submit" onclick="check()">
 	</form>
+	<p id="put"></p>
 	<script type="text/javascript">
 		function check(){
 			if (document.forms[0].elements[0].value.length < 8) {
-				alert("Your username must be at least 8 character");
+				document.getElementById("put").innerHTML="Your username must be at least 8 character";
 			}
 			else{
 				alert("Your username accepted");
