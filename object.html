@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var person={firstname:'Alamgir',lastname:'Hossain', age:25, color:'white'};
+
+		console.log(person.lastname);
+		console.log(person['firstname']);
+
+		var fruits=['Amm', 'Zaam','Jaam','Kathal','Lichu','Peyara'];
+		// console.log(fruits.push("Jambura"));
+
+		fruits.sort();
+		console.log(fruits);
+		fruits.reverse();
+
+		// fruits.shift('Amm');
+		// fruits.unshift('Amm');
+
+		// console.log(fruits.join('*'));
+		// console.log(fruits.toString());
+
+		// console.log(fruits.pop());
+		delete fruits[1];
+		console.log(fruits);
+
+		var num=[22,20,10,30,5,60];
+		console.log(num);
+
+		num.sort(function(a,b){return a-b});
+		console.log(num);
+
+		num.sort(function(a,b){return b-a});
+		console.log(num);
+
+		num.sort(function(a,b){return .5 -Math.random()});
+		console.log(num);
+
+		var n=[
+		{carname:'BMW',Year:2019},
+		{carname:'Wcc',Year:2029},
+		{carname:'bnm',Year:2030}
+		];
+
+		n.sort(function(a,b){
+			return a.year -b.year
+		});
+		console.log(n);
+
+	
+
+		
+
+		// n.sort(function(a,b){
+		// 	var x=a.carname.toLowerCase();
+		// 	var y=b.carname.toLowerCase();
+		// 	if (x<y) {return -1;}
+		// 	if (x>y) {return 1;}
+		// 	return 0;
+		// });
+		// console.log(n);
+
+		var date=new Date();
+		console.log(date);
+
+		var date=new Date(2019,6,11,8,50,50,0);
+		console.log(date);
+
+		var date=new Date('jul,11, 2019. 8:54:05');
+		console.log(date);
+
+		console.log(date.toDateString());
+
+		console.log(date.toUTCString());
+
+		console.log(date.getMonth());
+		console.log(date.getFullYear());
+		console.log(date.getHours());
+		console.log(date.getMinutes());
+		console.log(date.getSeconds());
+		console.log(date.getMilliseconds());
+		console.log(date.getTime());
+		// console.log(date.DateNow());
+		console.log(date.getDay());
+
+		var n=10.4;
+		var m=10.6;
+
+		
+		console.log(Math.round(n));
+		console.log(Math.round(m));
+		console.log(Math.ceil(n));
+		console.log(Math.floor(m));
+
+		var u=8;
+		var v=2;
+
+		console.log(Math.pow(u,v));
+
+		console.log(Math.max(1,30,20,300));
+		console.log(Math.min(2,10,40));
+
+		console.log(Math.floor(Math.random()*100));
+
+		
+			var max=10;
+			var min=1;
+			console.log(Math.floor(Math.random()*(max-min)+1));
+		
+		
+
+
+
+	</script>
+
+</body>
+</html>
