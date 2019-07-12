@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio checkbox</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Gender</legend>
+		<form >
+			<label>
+					<input type="radio" name="Gender" value="Male">
+					Male
+					<input type="radio" name="Gender" value="Female">
+					Female
+					<input type="radio" name="Gender" value="Others">
+					Others
+			</label>
+		
+	</fieldset>
+	<fieldset>
+		<legend>Hobbies</legend>
+		
+			<label><input type="checkbox" name="Hobbies" value="Reading">
+					Reading
+					<input type="checkbox" name="Hobbies" value="Writing">
+					Writing
+					<input type="checkbox" name="Hobbies" value="Swimming">
+					Swimming
+					<input type="checkbox" name="Hobbies" value="Eating">
+					Eating
+			</label>
+		
+	</fieldset>
+	<fieldset>
+		<legend>Distric</legend>
+		
+			<select name="sel">
+				<option value="Dhaka">Dhaka</option>
+				<option value="Jamalpur">Jamalpur</option>
+				<option value="Khulna">Khulna</option>
+				<option value="Rajshahi">Rajshahi</option>
+			</select>
+		</form>
+		
+	</fieldset>
+	<input type="button" value="Submit" onclick="pass()">
+	<br><br>
+	<hr>
+	<div>
+		<textarea rows="20" cols="30" id="put"></textarea>
+	</div>
+	<script type="text/javascript">
+		function pass(){
+			var a=document.forms[0].Gender.value;
+
+			var h=document.getElementsByName("Hobbies");
+
+			for(var i=0; i<h.length; i++){
+				if (h[i].checked) {
+					document.getElementById("put").innerHTML+=h[i].value + "<br>";
+				}
+			}
+			var c=document.forms[0].sel.value;
+			document.getElementById("put").innerHTML=a + " <br> "+ c;
+		}
+	</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="userRegForm">
+        <fieldset>
+        <legend>Gender</legend> 
+        <label for="">
+            male 
+            <input type="radio" name="g" id="" value="m"> 
+        </label> 
+        <label for="">
+                female 
+                <input type="radio" name="g" id="" value="f"> 
+            </label>
+        </fieldset> 
+        <fieldset>
+            <legend>Hobbies</legend>
+            <label for="">
+                Reading : <input type="checkbox" name="hob" value="reading">
+            </label>
+            <label for="">
+                Writing : <input type="checkbox" name="hob" value="writing">
+            </label>
+            <label for="">
+                Swimming : <input type="checkbox" name="hob" value="swim">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>HomeDistrict</legend>
+            <select name="hd">
+                <option value="dh">Dhaka</option>
+                <option value="ch">Chittagong</option>
+                <option value="rj">Rajshahi</option>
+                <option value="kl">Khulna</option>
+            </select>
+        </fieldset>
+            <input type="button" value="Sub" onclick="get_form_values()">        
+    </form>
+    <hr>
+    <div id="res">
+
+    </div>
+    <script>
+    function get_form_values(){
+document.getElementById("res").innerHTML = document.userRegForm.g.value + "<br>";
+
+
+var h = document.getElementsByName("hob");
+for (let index = 0; index < h.length; index++) {
+    if(h[index].checked){
+        document.getElementById("res").innerHTML += h[index].value + "<br>"; 
+    }    
+}
+document.getElementById("res").innerHTML += document.userRegForm.hd.value + "<br>"; 
+    }
+    </script>
+</body>
+</html> -->

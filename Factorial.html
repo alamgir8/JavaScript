@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial</title>
+</head>
+<body>
+	<form>
+		<input type="number" name="">
+		<input type="button" onclick="fact()" value="Calculate Factorial">
+	</form>
+	<h1 id="res"></h1>
+
+	<script type="text/javascript">
+		function fact(){
+			var n=document.forms[0].elements[0].value;
+			var res=1;
+
+			for(var i=1; i<=n; i++){
+				res=res*i;
+
+			}
+			document.getElementById("res").innerHTML=res;
+		}
+		
+	</script>
+
+</body>
+</html>

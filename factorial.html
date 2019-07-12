@@ -4,17 +4,24 @@
 	<title>Factorial</title>
 </head>
 <body>
-	<h3>Check Factorial</h3>
-	<input type="number" onkeyup="Check(this.value)">
-	<p id="put"></p>
+	<form>
+		<input type="number" name="">
+		<input type="button" onclick="fact()" value="Calculate Factorial">
+	</form>
+	<h1 id="res"></h1>
+
 	<script type="text/javascript">
-		function Check(n){
-			var total=1;
+		function fact(){
+			var n=document.forms[0].elements[0].value;
+			var res=1;
+
 			for(var i=1; i<=n; i++){
-				total*=i;
+				res=res*i;
+
 			}
-			document.getElementById("put").innerHTML=total;
+			document.getElementById("res").innerHTML=res;
 		}
+		
 	</script>
 
 </body>

@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Usename Validation</title>
+<meta charset="utf-8">
+<title>Untitled Document</title>
 </head>
-<body>
-	<form>
-		<input type="text" placeholder="inter your username">
-		<input type="button" onclick="check()">
-	</form>
-	<script type="text/javascript">
-		function check(){
-			if (document.forms[0].elements[0].value<8) {
-				alert("Your username must be at least 8 character")
-			}
-			else{
-				"Your username accepted"
-			}
-		}
-	</script>
 
+<body>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td><select>
+				<option>Male</option>
+				<option>Female</option>
+				</select>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
