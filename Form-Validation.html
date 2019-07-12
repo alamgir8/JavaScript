@@ -22,17 +22,18 @@
 	<form>
 		<table>
 			<tr>
-				<td><label>Name:</label></td>
-				<td><input type="text" name="name"></td>
+				<td><label>Firstname:</label></td>
+				<td><input type="text" name="Firstname"></td>
 			</tr>
 			<tr>
-				<td><label>Contact:</label></td>
-				<td><input type="text" name="contact"></td>
+				<td><label>Lastname:</label></td>
+				<td><input type="text" name="Lastname"></td>
 			</tr>
 			<tr>
-				<td><label>Remark:</label></td>
-				<td><textarea ></textarea></td>
+				<td><label>Mobile:</label></td>
+				<td><input type="number" name="contact"></td>
 			</tr>
+			
 
 
 				<tr>
@@ -47,12 +48,25 @@
 					</td>
 				</tr>
 				<tr>
-				<td><label>Sex:</label></td>
-				<td><input type="radio" name="sex" value="Male">
+				<td><label>Gender:</label></td>
+				<td><input type="radio" name="gender" value="Male">
 					<label>Male</label>
-					<input type="radio" name="sex" value="Female">
+					<input type="radio" name="gender" value="Female">
 					<label>Female</label>
 				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type="password" name=""></td>
+			</tr>
+			<tr>
+				<td><label>Re-Password:</label></td>
+				<td><input type="password" name=""></td>
+			</tr>
+			<tr>
+				<td><label>Massage:</label></td>
+				<td><textarea ></textarea></td>
 			</tr>
 			<tr>
 				<td><label>Course:</label></td>
@@ -69,37 +83,65 @@
 				</td>
 			</tr>
 				<tr>
+					<td><input type="Reset" name="" value="Reset"></td>
 					<td><input type="button" value="Submit" name="" onclick="pass()" ></td>
 				</tr>
 			</tr>
 		</table>
 	</form>
-	<hr>
+
+
 	<p id="put"></p>
 
 	<script type="text/javascript">
 		function pass(){
+
+
 			var a=document.forms[0].elements[0].value;
 			var b=document.forms[0].elements[1].value;
 			var c=document.forms[0].elements[2].value;
 			var d=document.forms[0].language.value;
-			var e=document.forms[0].sex.value;
+			var e=document.forms[0].gender.value;
+			var g=document.forms[0].elements[6].value;
+			var h=document.forms[0].elements[7].value;
+			var i=document.forms[0].elements[8].value;
 			var f=document.forms[0].cr;
 		
 			
 			var data=" ";
 
-			for(var i=0; i<f.length;i++){
-				if (f[i].checked) {
-					data=data+f[i].value + " ";
+			for(var u=0; u<f.length; u++){
+				if (f[u].checked) {
+					data=data+f[u].value + " ";
 				}
 			}
 
-			var g= ('<form><table><tr><th colspan="2">Information Form</th></tr><tr><td>Name:</td><td>'+ a + '</td></tr><tr><td>Contact:</td><td>' + b + '</td></tr><tr><td>Remarks:</td><td> ' + c + '</td></tr><tr><td>Language:</td><td>' + d + '</td></tr><tr><td>Sex:</td><td>' + e + '</td></tr><tr><td>Course:</td><td>' + data + '</td></tr></table></form>');
+		
 
-			document.getElementById("put").innerHTML=g;
+			 var g= ('<form><table><tr><th colspan="2">Information Form</th></tr><tr><td>Firstname:</td><td>'+ a + '</td></tr><tr><td>Lastname:</td><td>' + b + '</td></tr><tr><td>Mobile:</td><td> ' + c + '</td></tr><tr><td>Language:</td><td>' + d + '</td></tr><tr><td>Gender:</td><td>' + e + '</td></tr><tr><td>Password:</td><td>' + g + '</td></tr><tr><td>Re-Password:</td><td>' + h + '</td></tr><tr><td>Massage:</td><td>' + i + '</td></tr><tr><td>Course:</td><td>' + data + '</td></tr></table></form>');
+
+			 // document.getElementById('put').innerHTML=g;
+
+		
+		
+			window.open('  ', ' ', 'width=500px height=800px');
+			
+			document.write('<h1>Registation Form</h1><br>');
+			document.write('Firstname:'+ a + '<br>');	
+			document.write('Lastname:'+ b +' <br>');
+			document.write('Mobile:'+ c + '<br>');
+			document.write('Language:'+ d + '<br>');
+			document.write('Gender:'+ e + '<br>');
+			document.write('Course:'+ f + '<br>');
+			document.write('Password:'+ g + '<br>');
+			document.write('Re-Password:'+ h + '<br>');
+			document.write('Massage:'+ i + '<br>');
+			
 			
 		}
+
+
+
 	</script>
 
 	
