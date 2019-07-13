@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Form-validation</title>
 	<style type="text/css">
+		body{
+			margin:0;
+			padding: 0;
+			background-image: url(images/5.png);
+		}
+		table{
+
+			margin:0 auto;
+		}
 		form{
-			border-collapse: collapse;
+			margin:0 auto;
+			width: 60%;
 			border: 2px solid green;
+
+		}
+		#put{
+			text-align: center;
+			font-size: 20px;
 			padding: 10px;
-			margin: 15px;
-			width: 50%;
-			margin: 0 auto;
-		}
-		table,td{
+			margin: 5px;
+
 			
-			margin: 0 auto;
+			background-color: red;
+			
 		}
-		
 	</style>
+	
 </head>
 <body>
-	<form>
+	<form name="info">
 		<table>
 			<tr>
-				<td><label>Firstname:</label></td>
+				<th colspan="2">Registation Form</th>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			
+			
+			<tr>
+				<td>Firstname:</td>
 				<td><input type="text" name="Firstname"></td>
 			</tr>
 			<tr>
-				<td><label>Lastname:</label></td>
+				<td>Lastname:</td>
 				<td><input type="text" name="Lastname"></td>
 			</tr>
 			<tr>
-				<td><label>Mobile:</label></td>
-				<td><input type="number" name="contact"></td>
+				<td>Mobile:</td>
+				<td><input type="number" name="mobile"></td>
 			</tr>
 			
 
@@ -39,7 +61,8 @@
 				<tr>
 					<td>Language:</td>
 					<td>
-						<select name="language">
+						<select name="language" id="drop">
+							<option></option>
 							<option>Bangla</option>
 							<option>English</option>
 							<option>Arabic</option>
@@ -48,101 +71,220 @@
 					</td>
 				</tr>
 				<tr>
-				<td><label>Gender:</label></td>
+				<td>Gender:</td>
 				<td><input type="radio" name="gender" value="Male">
-					<label>Male</label>
+					Male
 					<input type="radio" name="gender" value="Female">
-					<label>Female</label>
+					Female
+				</td>
+			</tr>
+			<tr>
+				<td>Course:</td>
+				<td>
+					
+					<input type="checkbox" name="cr" value="NT">
+					NT
+					<input type="checkbox" name="cr" value="WDPF">
+					WDPF
+					<input type="checkbox" name="cr" value="DDD">
+					DDD
+					<input type="checkbox" name="cr" value="GD">
+					GD 
 				</td>
 			</tr>
 			
 			<tr>
-				<td><label>Password:</label></td>
-				<td><input type="password" name=""></td>
+				<td>Password:</td>
+				<td><input type="password" name="p"></td>
 			</tr>
 			<tr>
-				<td><label>Re-Password:</label></td>
-				<td><input type="password" name=""></td>
+				<td>Re-Password:</td>
+				<td><input type="password" name="p1"></td>
 			</tr>
 			<tr>
-				<td><label>Massage:</label></td>
-				<td><textarea ></textarea></td>
+				<td>Massage:</td>
+				<td><textarea name="ms"></textarea></td>
 			</tr>
+			
 			<tr>
-				<td><label>Course:</label></td>
 				<td>
-					
-					<input type="checkbox" name="cr" value="NT">
-					<label>NT</label>
-					<input type="checkbox" name="cr" value="WDPF">
-					<label>WDPF</label>
-					<input type="checkbox" name="cr" value="DDD">
-					<label>DDD</label>
-					<input type="checkbox" name="cr" value="GD">
-					<label>GD</label> 
+					<input type="Reset" name="" value="Reset">
 				</td>
+				<td>
+					<input type="button" value="Submit" name="" onclick="pass()" >
+				</td>
+
 			</tr>
-				<tr>
-					<td><input type="Reset" name="" value="Reset"></td>
-					<td><input type="button" value="Submit" name="" onclick="pass()" ></td>
-				</tr>
-			</tr>
+				
 		</table>
 	</form>
 
 
-	<p id="put"></p>
+	
+					
+			
+		
+
+	
+
+	<p id="put" style="display: none;"></p>
 
 	<script type="text/javascript">
 		function pass(){
-
+		
 
 			var a=document.forms[0].elements[0].value;
 			var b=document.forms[0].elements[1].value;
 			var c=document.forms[0].elements[2].value;
 			var d=document.forms[0].language.value;
-			var e=document.forms[0].gender.value;
-			var g=document.forms[0].elements[6].value;
-			var h=document.forms[0].elements[7].value;
-			var i=document.forms[0].elements[8].value;
-			var f=document.forms[0].cr;
-		
+			var e=document.info.gender.value;
 			
+			var g=document.forms[0].p.value;
+			var h=document.forms[0].p1.value;
+			var i=document.forms[0].ms.value;
+			var f=document.info.cr;
+		
 			var data=" ";
 
 			for(var u=0; u<f.length; u++){
 				if (f[u].checked) {
-					data=data+f[u].value + " ";
+					data=data+f[u].value;
 				}
 			}
 
-		
-
-			 var g= ('<form><table><tr><th colspan="2">Information Form</th></tr><tr><td>Firstname:</td><td>'+ a + '</td></tr><tr><td>Lastname:</td><td>' + b + '</td></tr><tr><td>Mobile:</td><td> ' + c + '</td></tr><tr><td>Language:</td><td>' + d + '</td></tr><tr><td>Gender:</td><td>' + e + '</td></tr><tr><td>Password:</td><td>' + g + '</td></tr><tr><td>Re-Password:</td><td>' + h + '</td></tr><tr><td>Massage:</td><td>' + i + '</td></tr><tr><td>Course:</td><td>' + data + '</td></tr></table></form>');
-
-			 // document.getElementById('put').innerHTML=g;
-
-		
-		
-			window.open('  ', ' ', 'width=500px height=800px');
 			
-			document.write('<h1>Registation Form</h1><br>');
-			document.write('Firstname:'+ a + '<br>');	
-			document.write('Lastname:'+ b +' <br>');
-			document.write('Mobile:'+ c + '<br>');
-			document.write('Language:'+ d + '<br>');
-			document.write('Gender:'+ e + '<br>');
-			document.write('Course:'+ f + '<br>');
-			document.write('Password:'+ g + '<br>');
-			document.write('Re-Password:'+ h + '<br>');
-			document.write('Massage:'+ i + '<br>');
+			if (a=="") {
+				var j="<li>Please inter your Firstname </li>";
+
+			}
 			
+			if (b=="") {
+				var k='<li> Please inter your Lastname </li>';
+			
+			}
+			if (c=="") {
+				var l ='<li> Please inter your mobile number </li>';
+			
+			}
+			if (d=="") {
+				var m='<li> Please select your language </li>';
+			
+			}
+			if (e=="") {
+				var n='<li> Please select gender </li>';
+			
+			}
+			if (data==false) {
+				var o='<li> Please select your course </li>';
+			
+			}
+			if (g.length<10) {
+				var p='<li> Please inter 10 length password </li>';
+			
+			}
+			if (h=="") {
+				var q='<li> Please confirm your password </li>';
+			
+			}
+			if (i=="") {
+				var r='<li> Please tell us your opinion </li>';
+			}
+			if (m=j+k+l+m+n+o+p+q+r) {
+			document.getElementById('put').innerHTML=m;
+			document.getElementById('put').style.display='block';
+			return false;
 			
 		}
+				
+			
+			
+			
+			
+			else{
+
+			var w=window.open("","", "width=500px height=500px");
+			
+			w.document.write('<h1>Registation Form</h1><br>');
+			w.document.write('Firstname:'+ a + '<br>');	
+			w.document.write('Lastname:'+ b +' <br>');
+			w.document.write('Mobile:'+ c + '<br>');
+			w.document.write('Language:'+ d + '<br>');
+			w.document.write('Gender:'+ e + '<br>');
+			w.document.write('Course:'+ data + '<br>');
+			w.document.write('Password:'+ g + '<br>');
+			w.document.write('Re-Password:'+ h + '<br>');
+			w.document.write('Massage:'+ i + '<br>');
+			}
+
+
+		}
+		
 
 
 
 	</script>
+			
+			<!-- else if (c=="") {
+				document.getElementById('put').innerHTML='Please input your Mobile number';
+				return false;
+			}
+
+			else if (d=="") {
+				document.getElementById('put').innerHTML='Please select your language';
+				return false;
+			}
+
+			else if (e=="") {
+				document.getElementById('put').innerHTML='Please select Gender';
+				return false;
+			}
+
+			else if (data=="") {
+				document.getElementById('put').innerHTML='Please select your Course';
+				return false;
+			}
+
+			else if (g=="") {
+				document.getElementById('put').innerHTML='Please input 10 length password';
+				return false;
+			}
+
+			else if (h=="") {
+				document.getElementById('put').innerHTML='Please confirm your password';
+				return false;
+			}
+
+			else if (i=="") {
+				document.getElementById('put').innerHTML='Please tell us your opinion';
+				return false;
+			}
+			
+
+				
+
+
+			
+				var g= ('<table><tr><th colspan="2">Information Form</th></tr><tr><td>Firstname:</td><td>'+ a + '</td></tr><tr><td>Lastname:</td><td>' + b + '</td></tr><tr><td>Mobile:</td><td> ' + c + '</td></tr><tr><td>Language:</td><td>' + d + '</td></tr><tr><td>Gender:</td><td>' + e + '</td></tr><tr><td>Password:</td><td>' + g + '</td></tr><tr><td>Re-Password:</td><td>' + h + '</td></tr><tr><td>Massage:</td><td>' + i + '</td></tr><tr><td>Course:</td><td>' + data + '</td></tr></table>');
+
+				document.write(g);
+
+		
+
+			
+			
+
+			
+			
+			var w=window.open("","","width=400px height=400px");
+				w.document.write("<h1>User Information:</h1>");
+				w.document.write("UserName:"+a+"<br>");
+				w.document.write("Password:"+ap+"<br>");
+				w.document.write("Contact Number:"+op+"<br>");
+				w.document.write("Comments:"+pu+"<br>");
+				w.document.write("Gender:"+tv+"<br>");
+				w.document.write("Course:"+btv+"<br>");
+				w.document.write("TSP:"+rak+"<br>"); -->
+
 
 	
 
@@ -152,288 +294,95 @@
 
 
 
-<!-- <!DOCTYPE HTML>
-<html>
-<head>
-<title>Quastion-1</title>
-<script language="javascript">
-function createnewwindow()
-{
-	var short=document.forms[0];
-	with(short)
-	{
-	var name=txtname.value;
-	var contact=txtcontact.value;
-	var remark=txtremark.value;
-	var location=lstlocation.value;
-	var sex="";
-	for(i=0;i<rdsex.length;i++)
-		{
-			if(rdsex[i].checked)
-			{
-			sex=rdsex[i].value;
-			}
-		}
-	var course="";
-	var sl=1;
-	for(i=0;i<chkcourse.length;i++)
-		{
-			if(chkcourse[i].checked)
-			{
-				if(sl==1)
-					course+=chkcourse[i].value;
-				else
-					course+=", "+chkcourse[i].value;
-				sl+=1;
-			
-			}
-		}
-	course+=".";
-	
-	var err="<ul>";
-	if (name=="")
-	err+="<li>name is required</li>";
-	if (contact=="")
-	err+="<li>Contact is required</li>";
-	if (sex=="")
-	err+="<li>sex is required</li>";
-	if (location=="Select")
-	err+="<li>Location is required</li>";
-	if (remark==".")
-	err+="<li>Remarks is required</li>";
-	if (course==".")
-	err+="<li>Course is required</li>";
-	err+="</ul>";
-	
-	if (err=="<ul></ul>")
-	{
-		var all="<table><caption style=\"background-color:red\">Information of the Students:</caption>";
-		all+="<tr><td>Name of the student:</td><th>"+name+"</th></tr>";
-		all+="<tr><td>Contact No.</td><th>"+contact+"</th></tr>";
-		all+="<tr><td>Gender</td><th>"+sex+"</th></tr>";
-		all+="<tr><td>Course Name</td><th>"+course+"</th></tr>";
-		all+="<tr><td>Location</td><th>"+location+"</th></tr>";
-		all+="<tr><td>Remarks</td><th>"+remark+"</th></tr>";
-		all+="</table>";
-		var newwindow=window.open("Information of students:","output","scrollbars=0,width=400,height=250,resizable=no");
-		var s=newwindow.document;
-		s.write("<html><head><link rel=\"stylesheet\" href=\"first.css\"/></head><body>");
-		s.write(all);
-		s.write("</body>");
-		s.close();
-	}
-	
-	else
-	{
-		
-		document.getElementById("error").style.width=document.getElementById("Table1").width;
-		document.getElementById("error").innerHTML=err;
-	}
-	
-	}
-}
-</script>
 
-</head>
-
-<body>
-<form id="form1" name="form1" method="post" action="#">
-  <p>
-  <div id="error" style="background:red"></div>
-  </p>
-  <table id="Table1" width="532px" border="1"  style="background-color:gray">
-    <tr>
-      <td width="53">Name</td>
-      <td width="144"><input name="txtname" type="text" id="txtname" /></td>
-      <td width="112">Contact</td>
-      <td width="286"><input name="txtcontact" type="text" id="txtcontact" /></td>
-    </tr>
-    <tr>
-      <td>Remark</td>
-      <td colspan="3"><textarea name="txtremark" cols="70" rows="5" id="txtremark"></textarea></td>
-    </tr>
-    <tr>
-      <td>Sex</td>
-      <td colspan="3"><input name="rdsex" type="radio" value="Male" />
-        Male
-        <input name="rdsex" type="radio" value="Female" />
-        Female
-      </td>
-    </tr>
-    <tr>
-      <td>Course</td>
-      <td colspan="3"><input name="chkcourse" type="checkbox" id="chkcourse" value="NT" />
-      NT
-      <input name="chkcourse" type="checkbox" id="chkcourse" value="IAD" />
-      IAD
-      <input name="chkcourse" type="checkbox" id="chkcourse" value="DDD" />
-      DDD
-      <input name="chkcourse" type="checkbox" id="chkcourse" value="ESAD" />
-      ESAD
-      </td>
-    </tr>
-    <tr>
-      <td>Location</td>
-      <td colspan="3"><select name="lstlocation" id="lstlocation">
-        <option value="Select">Select</option>
-        <option value="Banani">Banani</option>
-        <option value="Dhanmondi">Dhanmondi</option>
-        <option value="Mirpur">Mirpur</option>
-      </select>
-      </td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td colspan="3"><input type="button" name="Button" value="Submit" onclick="createnewwindow()" /></td>
-    </tr>
-  </table>
-</form>
-</body>
-</html> -->
 
 <!-- <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Form_Ques_2</title>
-<style>
-    .table1{
-        margin: 0 auto; border: 2px solid;
-       }
-    #resulth1{
-        text-align: center;
-    }
-    #table2 {
-        margin: 0 auto;
-        border-collapse: collapse;
-        border: 2px solid #919191;
-        width: 25%;
-        
-    }
-    
-    </style>
-    
-    
-    
-    </head>
-
+<title>Regristration From</title>
+</head>
 <body>
-	<caption></caption>
-    <h2 style="text-align: center">Form</h2>
-	<form name="myform">
-		<table class="table1">
-			<tr>
-				<td>User Name:  </td>
-				<td> <input type="text" id="username" name="username"> </td>
-			</tr>
-			<tr>
-				<td>Full Name: </td>
-				<td> <input type="text" id="fullname" > </td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td> <input type="password" id="password" > </td>
-			</tr>
-			<tr>
-				<td>Re-type Password: </td>
-				<td> <input type="password" id="repassword" > </td>
-			</tr>
-			<tr>
-				<td>Gender: </td>
-				<td> <input type="radio" id="male" name="gender" value="male"> Male
-					 <input type="radio" id="female" name="gender" value="female"> Female
-					</td>
-			</tr>
-			<tr>
-				<td>Language: </td>
-				<td> <select name="language">
-					<option value="English">English</option>
-					<option value="Bangla">Bagla</option>
-					<option value="Arabic">Arabic</option>
-					<option value="Japanese">Japanese</option>
-					</select> </td>
-			</tr>
-			<tr>
-				<td>Comment: </td>
-				<td><textarea name="textarea1"></textarea> </td>
-			</tr>
-			<tr>
-				<td>Chose your your Hobbis : </td>
-                <td><input type="checkbox" name="hob" value="Swim">Swim 
-                    <input type="checkbox" name="hob" value="Writting">Writting 
-                    <input type="checkbox" name="hob" value="Gurdenning">Gurdenning
-                </td>
-            </tr>
-            <tr>
-				<td></td>
-				<td> <button>Reset</button> 
-				<input type="button" onClick="getval()" value="Submit"></td>
-			</tr>
-		
-		</table>
-	</form> -->
-    <!-- <hr>
-    <h2 style="text-align: center">After Submitting form</h2>
-    <span id="showall"></span>    
+<form name="reg">
+<table>
+<tr>
+<td>UserName:</td>
+<td><input type="text" name="a"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="b"></td>
+</tr>
+<tr>
+<td>Contact Number:</td>
+<td><input type="number" name="c"></td>
+</tr>
+<tr>
+<td>Comments:</td>
+<td><textarea name="d"></textarea></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="e" value="Male">Male<input type="radio" name="e" value="Female">Female</td>
+</tr>
+<tr>
+<td>Course:</td>
+<td><input type="checkbox" name="k" value="J2">J2<input type="checkbox" name="k" value="WDPF">WDPF<input type="checkbox" name="k" value="NT">NT</td>
+</tr>
+<tr>
+<td>TSP:</td>
+<td><select id="drop"><option>Select</option><option>Mirpur</option><option>Kakrail</option><option>Dhanmondi</option></select></td>
+</tr>
+<tr>
+	<td><input type="Reset" name="" value="Reset"></td>
+	<td><input type="button" value="Submit" onclick="regform()">
+</td>
+</tr>
+</table>
+</form>
+<hr>
+<div id="show"></div>
+<script>
 
-    <table>
-        <tr>
-            <td>User Name: </td>
-            <td>"+a+"</td>
-        </tr>
-        <tr>
-            <td>Full Name :</td>
-            <td>"+b+"</td>
-        </tr>
-        <tr>
-            <td>Password is : </td>
-            <td>"+c+"</td>
-        </tr>
-        <tr>
-            <td>Gender : </td>
-            <td>"+e+"</td>
-        </tr>
-        <tr>
-            <td>Skilled Language : </td>
-            <td>"+f+"</td>
-        </tr>
-        <tr>
-            <td>Comment : </td>
-            <td>"+g+"</td>
-        </tr>
-        <tr>
-            <td>Hobbies :</td>
-            <td>"+hdata+"</td>
-        </tr>
-    </table>
--->
-    <!-- <script>
-    function getval(){
-        var a= document.forms[0].elements[0].value;
-        var b= document.forms[0].elements[1].value;
-        var c= document.forms[0].elements[2].value;
-        var d= document.forms[0].elements[3].value;
-        var e= document.forms[0].gender.value;
-        var f= document.forms[0].language.value;
-        var g= document.forms[0].textarea1.value;
-        var h= document.forms[0].hob;
-        var hdata="";
-        for (var i=0; i<h.length; i++){
-            if (h[i].checked){
-            hdata= hdata+h[i].value+", ";
-                
-        }
-        }
-        
-//        console.log(a+"\n"+b+"\n"+c+"\n"+d+"\n"+e+"\n"+f+"\n"+g+"\n"+hdata)
-        document.getElementById("showall").innerHTM=
-    document.getElementById("showall").innerHTML=("<h4 id='resulth1'>List of given Vlaue</h4><table id='table2'><tr><td>User Name: </td><td>"+a+"</td></tr><tr><td>Full Name :</td><td>"+b+"</td></tr><tr><td>Password is : </td><td>"+c+"</td></tr><tr><td>Gender : </td><td>"+e+"</td></tr><tr><td>Language : </td><td>"+f+"</td></tr><tr><td>Comment : </td><td>"+g+"</td></tr><tr><td>Hobbies :</td><td>"+hdata+"</td></tr></table>")
-    }
-    </script>
-    
+function regform(){
+	var us=document.forms[0].elements[0].value;
+	var ap=document.forms[0].elements[1].value;
+	var op=document.forms[0].elements[2].value;
+	var pu=document.forms[0].elements[3].value;
+	var tv=document.reg.e.value;
+	var rak=document.getElementById("drop").value;
+	var dh=document.getElementsByName("k");
+	var btv="";
+
+	for(var i=0;i<dh.length;i++){
+		if(dh[i].checked){
+		
+		// document.getElementById("show").innerHTML+=dh[i].value+"<br>";
+		btv+=dh[i].value;
+		}
 	
+	}
 	
-	
+
+// var rtv =document.getElementById("drop").value;
+var w=window.open("","","width=400px height=400px");
+w.document.write("<h1>User Information:</h1>");
+w.document.write("UserName:"+us+"<br>");
+w.document.write("Password:"+ap+"<br>");
+w.document.write("Contact Number:"+op+"<br>");
+w.document.write("Comments:"+pu+"<br>");
+w.document.write("Gender:"+tv+"<br>");
+w.document.write("Course:"+btv+"<br>");
+w.document.write("TSP:"+rak+"<br>");
+
+}
+
+</script>
+
+
+
+
 </body>
-	
 </html> -->
+
+
