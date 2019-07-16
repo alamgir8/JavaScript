@@ -1,151 +1,457 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>For Exam</title>
+	<title>Welcome|Home</title>
 	<style type="text/css">
+		body{
+			font-family: arial, helvatica, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 15px;
+			line-height: 1.5rem;
+			background:url(images/5.png);
+		}
+		header{
+			padding-top: 15px;
+			display: block;
+			
+		}
+
+		li{
+
+			display: inline;
+			padding-left: 15px;
 		
-		form{
-			padding: 20px;
-			width: 50%;
+		}
+		header a{
+			color: black;
+			font-weight: bold;
+			font-size: 18px;
+			text-decoration: none;
+		}
+		nav ul li a:hover{
+		color: green;
+
+	}
+		ul{
+			float: right;
+			padding: 0;
+			margin: 0;
+			
+		}
+		.branding{
+			float: left;
+		}
 		
+		.container{
+			width: 80%;
+			margin: auto;
+		}
+
+		section{
+			padding-top: 50px;
+
+			min-height: 500px;
+		}
+		#ab{
+			font-size: 25px;
+			line-height: 2.5rem;
+			width: 25%;
+			padding-left: 250px;
+			float: left;
+		}
+		#ab p{
+			line-height: 1.5rem;
+			font-size: 18px;
+			padding-left: 0px;
+		}
+		#ac{
+			padding-right: 150px;
+			float: right;
+		}
+		#article{
+
+			text-align: center;
 
 		}
-		form input{
-			margin: 5px;
-
+		#article p{
+				line-height: 1.5rem;
+				padding-left: 0px;
 		}
-body {
-	margin: 0;
-	padding: 0;
-}
+		#boxes{
+			display: inline-block;
+			padding-top: 150px;
+			padding-bottom: 150px;
+			padding-left: 150px;
+		
+		}
+		.box{
+	  float:left;
+	  text-align: justify;
+	  width:20%;
+	 padding-left: 100px;
+	}
+	.box p{
+			line-height: 1.5rem;
+			padding-left: 0;
+	}
+	.side{
+		min-height: 500px;
+		padding-left: 200px;
+	}
 
+	#ad{
+		float: left;
+
+		
+	}
+	#ae{
+		float: right;
+		width: 25%;
+		font-size: 25px;
+		padding-right: 300px;
+		line-height: 2rem;
+		
+	}
+	.side #ae p{
+		font-size: 15px;
+		line-height: 1.5rem;
+		margin-top: 0;
+	}
+
+	.side #ae h6, p{
+		padding-left: 30px;
+		line-height: 2rem;
+		margin: 0;
+	}
+	#sidebar{
+		min-height: 500px;
+		display: inline-block;
+		
+	}
+	#sidebar .first{
+		float: right;
+		width:15%;
+		text-align: center;
+		padding-left: 25px;
+		padding-top: 70px;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	h2{
+		padding-left: 380px;
+		padding-top: 100px;
+		margin-bottom: 0;
+	}
+	#second{
+		float: left;
+	}
+	.first h5, p{
+		line-height: 1rem;
+	}
+	#blockquote{
+		min-height: 400px;
+	}
+
+	#img{
+		float:right;
+	}
+	#quote{
+		float: left;
+		width: 40%;
+		font-size: 30px;
+		
+	}
+	#quote p{
+		padding-left: 30px;
+		line-height: 2rem;
+	}
+
+	
+	
+	#foot-cols{
+		padding-top: 15px;
+		background-color: grey;
+		min-height: 200px;
+		padding-right: 70px;
+	
+	}
+	.foot2{
+		float: left;
+		width: 25%;
+	}
+	.foot2 ul li a{
+		text-decoration: none;
+		display: block;
+		font-size: 16px;
+		color: black;
+		font-weight: bold;
+
+	}
+	.foot2 ul li{
+		margin: 0px;
+		padding: 0px;
+
+	}
+	ul li a:hover{
+		color: green;
+	}
+
+ footer{
+ 		position: absolute;
+ 		width: 97.7%;
+ 		margin-top: 200px;
+		background-color: black;
+		color: white;
+		padding: 15px;
+		text-align: center;
+	}
+	#form{
+		margin: 20px auto;
+		margin-top: 20px;
+		width: 600px;
+		background-color: orange;
+	}
+	form{
+		border-radius: 5px;
+		border: 2px solid green;
+		font-size: 17px;
+		padding: 25px;
+	}
+	label{
+		display:block;
+		font-weight: bold;
+
+		
+	}
+	input,textarea{
+
+		border-radius: 5px;
+		width: 100%;
+		padding: 5px;
+		margin-bottom:15px;
+
+	}
+	::placeholder{
+		font-size: 11px;
+	}
+	.in:hover{
+		color: green;
+		background-color: grey;
+	}
+	.in{
+		font-size: 17px;
+		width: 40%;
+    	display: inline;
+		margin-right: 40px;
+		text-align: center;
+		background-color: black;
+		color: white;
+		border-radius: 5px;
+		
+	}
+	.gen{
+		width: 15px;
+
+	}
 
 	</style>
-
 </head>
 <body>
 
-	
+	<header>
+		<div class="container">
+		<div class="branding">
+			<img src="images/Asset.png" width="100px;">
+		</div>
+		<nav >
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Work</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+		</div>
+			
+	</header>
 
-	<form >
-		<table>
-		<tr>
-			<td>
-				<label for="username">User name:</label>
-			</td>
-			<td>
-				<input id="username" type="text" name="firstname">
-			</td>
-		</tr>
-		
-		
-		<tr>
-			<td>
-				<label for="fullname">Full Name:</label>
-			</td>
-			<td>
-				<input id="fullname" type="text" name="fullname">
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-				<label for="password">Password:</label>
-			</td>	
-			<td>
-				<input id="password" type="Password" name="">
-			</td>
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				<label for="repassword">Re-typed password:</label>
-			</td>
-			<td>
-				<input id="repassword" type="password" name="">
-			</td>
-		</tr>
-		
-		
-		<tr>
-			<td>
+
+	<section >
+		<div id="ab">
+			<h1>Digital Agency That Help You Go Ahead</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation</p>
+		</div>
+		<div id="ac">
+			<img src="images/Image.png" width="500px;">
+		</div>
+	</section>
+
+		<div class="container">
+			<article id="article" >
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+			</article>
+		</div>
+
+		<div class="container" id="boxes">
+			<div class="box">
+			<img src="images/bar-chart.png" width="80px">
+			<h4>Growth Chart</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="box">
+			<img src="images/1498147012_simpline_46.png" width="100px">
+			<h4>Pie Chart</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="box">
+			<img src="images/1498147011_simpline_51.png" width="100px">
+			<h4>Star Chart</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+
+		<div class="side">
+			<div id="ad">
+			<img src="images/Image-3.png" width="500px;">
+			</div>
+
+			<div id="ae">
+			<h3>We are dynamic team of creative people innovation & Marketing Expert.</h3>
+			<h6>Best Digital Agency in Asia.</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="sidebar">
+			<div id="second">
+			<img src="images/Laptop Screen.png" width="300px;">
+			</div>
+			
+				
+					<h2>We provided wide range of web & business services.</h2>
+				<div class="first">
+					<img src="images/smartphone.png" width="11px;">
+					<h5>Smartphone is best</h5>
+					<p>Lorem ipsum dolor sadipisicing  , sed do eimagna aliqua.</p>
+				</div>
+				<div class="first">
+					<img src="images/layers.png"  width="20px;">
+					<h5>Smartphone is best</h5>
+					<p>Lorem ipsum dolor adipisicing elit, sed do eimagna aliqua.</p>
+				</div>
+				<div class="first">
+					<img src="images/raster.png"  width="18px;">
+					<h5>Smartphone is best</h5>
+					<p>Lorem ipsum dolor,  adipisicing elit, sed do eimagna aliqua.</p>
+				</div>
+				<div class="first">
+				<img src="images/Layer 2.png"  width="20px;">
+					<h5>Smartphone is best</h5>
+					<p>Lorem ipsum dolor dipisicing elit, sed do eimagna aliqua.</p>
+				</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container" id="blockquote">
+			<div id="img">
+				<img src="images/Image-1.png" width="500px;">
+			</div>
+			<div id="quote">
+				<img src="images/if_145-Quote_191985 copy.png" width="50px;">
+				<p>Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.</p>
+			</div>
+		</div>
+		<div id="form" class="container">
+			<form>
+				<h3 style="text-align: center;">User Registation Form</h3>
+				<label>Firstname:</label>
+				<input type="text" name="" placeholder="inter your firstname">
+				<label>Lastname:</label>
+				<input type="text" name="" placeholder="inter your lastname">
+				<label>Mobile Number:</label>
+				<input type="number" name="" placeholder="inter your mobile number">
 				<label>Gender:</label>
-			</td>
-			<td>
-				<input type="radio" name="Male">Male 
-				<input type="radio" name="Male">Female
-			</td>
-		</tr>
-				
-		
-		
-		<tr>
-			<td>
-				<label for="Language">Language:</label>
-			</td>
-			<td>
-				<select id="Language">
-						<option>English</option>
-						<option>Bangla</option>
-						<option>Hindi</option>
-						<option>Urdu</option>
-						<option>Arabic</option>
-				 </select>
-			 </td>
-		</tr>
-				
-		
-		
-		<tr>
-			<td>
-				<label for="comment">Comment:</label>
-			</td>
-			<td>
-				<textarea id="comment"></textarea>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				
-			</td>
-			<td>
-				<input type="Reset" value="Reset" name="">
-				<input type="submit" value="Submit" name="">
-			</td>
-		</tr>
-		</table>
-		
-		
-	</form>
+				<input class="gen" type="radio" name="g">Male
+				<input class="gen" type="radio" name="g">Female
+				<label>Email:</label>
+				<input type="email" name="" placeholder="inter your email">
+				<label>Password:</label>
+				<input type="Password" name="" placeholder="input your password">
+				<label>Confirm Password:</label>
+				<input type="Password" name="" placeholder="confirm your password">
+				<label>Address:</label>
+				<textarea placeholder="inter your address information"></textarea>
+				<input class="in" type="reset" name="" value="Reset" >
+				<input class="in" type="submit" name="" value="Sign Up">
+			</form>
+		</div>
 
 
+		
+
+		
+			<div id="foot-cols">
+				<div class="foot2">
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Investor Relations</a></li>
+						<li><a href="#">Corporate Information</a></li>
+					</ul>
+				</div>
+				<div class="foot2">
+					<ul>
+
+						<li><a href="#">Help Center</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="foot2">
+					<ul>
+						<li><a href="#">Account</a></li>
+						<li><a href="#">Terms Of Use</a></li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+				</div>
+				<div class="foot2">
+					<ul>
+						<li><a href="#">Media Center</a></li>
+						<li><a href="#">Cookie Preferences</a></li>
+						<li><a href="#">Legal Notices</a></li>
+					</ul>
+			</div>
 
 
+			
+	
+	<footer>
+		<p>All Rights & Copyright &copy; by &hearts; <span style="color: red;">Web Design Team</span> &hearts;</p>
+	</footer>
 
 	
-<!--<h2>About WWW</h2>
-<p>Here is a quote from WWW website:</p>
-<blockquote cite="http://www.google.com">
-	For 50 years, WWW has been protecting the future of nature. The World's leading conservation organization, WWW works in 100 countries and is supported by 1.2 million members in the United Stated and close to 5 million globally.
-</blockquote>
 
-
-<p>The <abbr title="World Wide Web">WWW</abbr> was founded in 1990.</p><br><br>
-
-<address>
-	Name: Alamgir<br>
-	ID:1251884
-</address>
-
-
-
-<p>Here is a quote from WWF's website:</p>
-
-<blockquote cite="http://www.worldwildlife.org/who/index.html">
-For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
-</blockquote>-->
+	
 
 </body>
 </html>
+
+<!--
