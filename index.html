@@ -2,6 +2,21 @@
 <html>
 <head>
 	<title>Welcome|Home</title>
+	<script type="text/javascript">
+			function on(){
+				var a=document.info.p.value;
+				var b=document.info.p2.value;
+
+				if (a!==b) {
+					alert("Please Confirm your Password");
+					return false;
+				}
+				else{
+					return true;
+				}
+
+			}
+		</script>
 	<style type="text/css">
 		body{
 			font-family: arial, helvatica, sans-serif;
@@ -14,6 +29,7 @@
 		header{
 			padding-top: 15px;
 			display: block;
+
 			
 		}
 
@@ -49,6 +65,8 @@
 		}
 
 		section{
+			
+			margin: 0;
 			padding-top: 50px;
 
 			min-height: 500px;
@@ -79,6 +97,8 @@
 				padding-left: 0px;
 		}
 		#boxes{
+			background-color: #C0C0C0;
+			width: 100%;
 			display: inline-block;
 			padding-top: 150px;
 			padding-bottom: 150px;
@@ -150,6 +170,8 @@
 		line-height: 1rem;
 	}
 	#blockquote{
+		background-color: black;
+		width: 100%;
 		min-height: 400px;
 	}
 
@@ -157,12 +179,14 @@
 		float:right;
 	}
 	#quote{
+		padding: 20px;
 		float: left;
 		width: 40%;
 		font-size: 30px;
 		
 	}
 	#quote p{
+		color: white;
 		padding-left: 30px;
 		line-height: 2rem;
 	}
@@ -381,29 +405,30 @@
 			</div>
 		</div>
 		<div id="form" class="container">
-			<form>
+			<form name="info">
 				<h3 style="text-align: center;">User Registation Form</h3>
-				<label>Firstname:</label>
-				<input type="text" name="" placeholder="inter your firstname">
-				<label>Lastname:</label>
-				<input type="text" name="" placeholder="inter your lastname">
-				<label>Mobile Number:</label>
-				<input type="number" name="" placeholder="inter your mobile number">
+				<label for="fn">Firstname:</label>
+				<input id="fn" type="text" name="" placeholder="inter your firstname">
+				<label for="ln">Lastname:</label>
+				<input id="ln" type="text" name="" placeholder="inter your lastname">
+				<label for="mn">Mobile Number:</label>
+				<input id="mn" type="number" name="" placeholder="inter your mobile number">
 				<label>Gender:</label>
 				<input class="gen" type="radio" name="g">Male
 				<input class="gen" type="radio" name="g">Female
-				<label>Email:</label>
-				<input type="email" name="" placeholder="inter your email">
-				<label>Password:</label>
-				<input type="Password" name="" placeholder="input your password">
-				<label>Confirm Password:</label>
-				<input type="Password" name="" placeholder="confirm your password">
+				<label for="em">Email:</label>
+				<input id="em" type="email" name="" placeholder="inter your email">
+				<label for="pas">Password:</label>
+				<input id="pas" type="Password" name="p" placeholder="input your password">
+				<label for="pass">Confirm Password:</label>
+				<input id="pass" type="Password" name="p2" placeholder="confirm your password">
 				<label>Address:</label>
 				<textarea placeholder="inter your address information"></textarea>
 				<input class="in" type="reset" name="" value="Reset" >
-				<input class="in" type="submit" name="" value="Sign Up">
+				<input class="in" type="submit" name="" value="Sign Up" onclick="on()">
 			</form>
 		</div>
+		
 
 
 		
